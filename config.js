@@ -6,7 +6,7 @@ window.BEASTWARS_CONFIG = {
   socials: {
     discord: "#",
     x: "#",
-    youtube: "#"
+    youtube: "https://www.youtube.com/@MisterVal56"
   },
   // Mets ici le chemin de ton icône officielle, par exemple "assets/mon-icone.png".
   gameIcon: "assets/game-icon.svg",
