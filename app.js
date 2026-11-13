@@ -106,7 +106,7 @@ async function loadComments() {
     if (!response.ok) throw new Error("API indisponible");
     const data = await response.json(); showComments(data.comments || []);
   } catch {
-    commentsList.innerHTML = '<p class="empty-comments">Les commentaires seront activés après la configuration de la base de données Cloudflare D1. Consulte le README.</p>';
+    commentsList.innerHTML = '<p class="empty-comments">Salut toi tu a une chose a nous dire ?</p>';
     commentCount.textContent = "—";
   }
 }
@@ -123,7 +123,7 @@ commentForm.addEventListener("submit", async event => {
     if (!response.ok) throw new Error(data.error || "Impossible de publier le commentaire.");
     commentForm.reset(); commentStatus.textContent = "Commentaire publié !"; await loadComments();
   } catch (error) {
-    commentStatus.textContent = error.message.includes("Failed to fetch") ? "Le système de commentaires n'est pas encore configuré. Consulte le README." : error.message;
+    commentStatus.textContent = error.message.includes("Failed to fetch") ? "Impossible de publier ton commentaire pour le moment. Réessaie plus tard" : error.message;
   } finally { button.disabled = false; button.innerHTML = 'PUBLIER LE COMMENTAIRE <span>↗</span>'; }
 });
 loadComments();
