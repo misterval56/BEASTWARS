@@ -9,6 +9,6 @@ window.BEASTWARS_CONFIG = {
     youtube: "https://www.youtube.com/@MisterVal56"
   },
   // Mets ici le chemin de ton icône officielle, par exemple "assets/mon-icone.png".
-  gameIcon: "assets/game-icon.svg",
+  gameIcon: "assets/icone.png",
   developmentProgress: 35
 };
