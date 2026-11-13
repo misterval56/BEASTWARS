@@ -1,2 +1,0 @@
-# BEASTWARS
-BEASTWARS site
