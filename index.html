@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0f">
+  <meta name="description" content="BEASTWARS : collectionne des créatures mythiques, découvre leurs pouvoirs et prépare-toi aux combats PvP sur Roblox. Jeu en développement.">
+  <meta property="og:title" content="BEASTWARS — Le pouvoir des créatures">
+  <meta property="og:description" content="Découvre les animaux, les œufs et l'univers de BEASTWARS. Jeu en développement.">
+  <meta property="og:type" content="website">
+  <title>BEASTWARS — Le pouvoir des créatures</title>
+  <link rel="icon" href="assets/game-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-glow" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="BEASTWARS, accueil">
+      <img src="assets/game-icon.svg" alt="Icône du jeu BEASTWARS" class="brand-icon">
+      <span>BEAST<span>WARS</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#animaux">Animaux</a><a href="#oeufs">Œufs</a><a href="#boutique">Boutique</a>
+      <a href="#developpement">Développement</a><a href="#communaute">Communauté</a>
+      <a class="nav-cta" href="#communaute">Nous suivre <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="accueil">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> UNIVERS ROBLOX · FANTASY · PVP</div>
+        <h1>LE POUVOIR<br>DES <span class="gradient-text">CRÉATURES.</span></h1>
+        <p class="hero-lead">Collectionne des bêtes extraordinaires, maîtrise leurs pouvoirs et prépare-toi à entrer dans l’arène.</p>
+        <div class="status-pill"><span>🚧</span> JEU EN DÉVELOPPEMENT — RESTEZ CONNECTÉS !</div>
+        <div class="hero-actions">
+          <a class="button button-primary" id="playButton" href="#" target="_blank" rel="noopener">JOUER SUR ROBLOX <span>↗</span></a>
+          <a class="button button-ghost" href="#animaux">DÉCOUVRIR LE JEU</a>
+        </div>
+        <p class="small-note">La sortie sera annoncée ici. Suis le développement pour ne rien manquer.</p>
+      </div>
+      <div class="hero-art">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-icon-frame">
+          <!-- Remplace assets/game-icon.svg par l'icône officielle de ton jeu quand elle sera prête. -->
+          <img src="assets/game-icon.svg" alt="Emplacement de l'icône officielle BEASTWARS" class="hero-game-icon">
+          <span class="icon-caption">ICÔNE DU JEU</span>
+        </div>
+        <div class="floating-tag tag-top">✦ 7 RARETÉS</div>
+        <div class="floating-tag tag-bottom">⚡ POUVOIRS UNIQUES</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Caractéristiques du jeu">
+      <div>🐉 7 RARETÉS <span>✦</span> ⚔️ COMBATS PVP <span>✦</span> 🥚 ŒUFS À OUVRIR <span>✦</span> 🔥 POUVOIRS UNIQUES <span>✦</span> 🐉 7 RARETÉS <span>✦</span> ⚔️ COMBATS PVP <span>✦</span></div>
+    </section>
+
+    <section class="section-wrap intro-section">
+      <div class="section-heading">
+        <p class="eyebrow">BIENVENUE DANS L'ARÈNE</p>
+        <h2>TA PROCHAINE <span class="gradient-text">LÉGENDE</span> COMMENCE ICI.</h2>
+      </div>
+      <p class="intro-text">Dans BEASTWARS, chaque créature possède sa propre identité et un pouvoir spécial. Fais éclore des œufs, développe ta collection, améliore tes animaux et affronte d’autres joueurs dans une arène multijoueur.</p>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon">🥚</span><h3>COLLECTIONNE</h3><p>Ouvre des œufs et découvre des créatures de sept raretés différentes.</p></article>
+        <article class="feature-card"><span class="feature-icon">⚡</span><h3>MAÎTRISE</h3><p>Chaque animal possède un pouvoir unique. Choisis celui qui correspond à ton style.</p></article>
+        <article class="feature-card"><span class="feature-icon">⚔️</span><h3>COMBATS</h3><p>Prépare ton animal et mesure-toi aux autres joueurs dans l’arène PvP.</p></article>
+      </div>
+    </section>
+
+    <section class="section-wrap content-section" id="animaux">
+      <div class="section-heading heading-row">
+        <div><p class="eyebrow">TON ÉQUIPE, TON DESTIN</p><h2>LES <span class="gradient-text">ANIMAUX</span></h2></div>
+        <p class="section-aside">7 créatures à découvrir<br>1 animal équipé à la fois</p>
+      </div>
+      <div class="animal-grid" id="animalGrid"></div>
+    </section>
+
+    <section class="egg-section" id="oeufs">
+      <div class="section-wrap">
+        <div class="section-heading"><p class="eyebrow">QUE CACHE L'ŒUF ?</p><h2>OUVRE. DÉCOUVRE. <span class="gradient-text">RECOMMENCE.</span></h2><p class="section-description">Chaque œuf possède ses propres probabilités. Les chances sont affichées clairement avant l'ouverture.</p></div>
+        <div class="egg-grid" id="eggGrid"></div>
+        <p class="probability-note">Les probabilités affichées sont celles prévues pour le jeu et pourront évoluer pendant le développement.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap content-section" id="boutique">
+      <div class="section-heading"><p class="eyebrow">PERSONNALISE TON AVENTURE</p><h2>GAME PASSES <span class="gradient-text">& BOUTIQUE</span></h2></div>
+      <div class="shop-layout">
+        <div><h3 class="subheading">GAME PASSES</h3><div class="pass-list" id="passList"></div></div>
+        <div><h3 class="subheading">PACKS DE PIÈCES</h3><div class="coin-panel"><div class="coin-emblem">✦</div><h3>PIÈCES</h3><p>Des packs de monnaie pour préparer ton aventure.</p><div class="coin-packs" id="coinPacks"></div><span class="coming-soon">PRIX ET ACHATS À VENIR</span></div></div>
+      </div>
+      <p class="small-note">Les achats et Game Passes seront disponibles dans le jeu Roblox. Aucun achat n'est proposé sur ce site.</p>
+    </section>
+
+    <section class="development-section" id="developpement">
+      <div class="section-wrap">
+        <div class="section-heading heading-row"><div><p class="eyebrow">EN COULISSES</p><h2>LE MONDE PREND <span class="gradient-text">FORME.</span></h2></div><span class="status-pill"><span>🚧</span> EN DÉVELOPPEMENT</span></div>
+        <div class="progress-card">
+          <div class="progress-top"><div><span class="progress-label">PROGRESSION GLOBALE</span><strong id="progressValue">35%</strong></div><span class="progress-caption">Estimation de développement</span></div>
+          <div class="progress-track"><span style="width:35%" id="progressBar"></span></div>
+          <p class="progress-disclaimer">Progression indicative, modifiable dans <code>config.js</code>.</p>
+        </div>
+        <div class="roadmap" id="roadmap"></div>
+      </div>
+    </section>
+
+    <section class="section-wrap community-section" id="communaute">
+      <div class="community-copy"><p class="eyebrow">RESTE DANS LA BOUCLE</p><h2>LA COMMUNAUTÉ<br>FAIT LA <span class="gradient-text">LÉGENDE.</span></h2><p>Retrouve les annonces, les aperçus du jeu et les prochaines étapes du développement.</p>
+        <div class="social-links" id="socialLinks"></div>
+      </div>
+      <div class="comment-box">
+        <div class="comment-title"><div><p class="eyebrow">LE TABLEAU DE LA COMMUNAUTÉ</p><h3>COMMENTAIRES</h3></div><span class="comment-count" id="commentCount">0</span></div>
+        <p class="comment-help">Partage ton avis ou un message pour l'équipe BEASTWARS. Ne partage aucune information personnelle.</p>
+        <form id="commentForm" class="comment-form">
+          <label for="commentName">Ton pseudo</label><input id="commentName" name="name" maxlength="24" placeholder="Ex. DragonMaster" required>
+          <label for="commentMessage">Ton commentaire</label><textarea id="commentMessage" name="message" maxlength="500" rows="3" placeholder="Écris ton message (500 caractères maximum)..." required></textarea>
+          <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="button button-primary" type="submit" id="commentSubmit">PUBLIER LE COMMENTAIRE <span>↗</span></button>
+          <p class="form-status" id="commentStatus" role="status" aria-live="polite"></p>
+        </form>
+        <div class="comments-list" id="commentsList"><p class="empty-comments">Chargement des commentaires…</p></div>
+      </div>
+    </section>
+
+    <section class="contact-strip">
+      <div class="section-wrap contact-inner"><div><p class="eyebrow">UNE QUESTION ?</p><h2>CONTACTE L'ÉQUIPE</h2><p>Pour le moment, retrouve-nous via les réseaux indiqués ci-dessus.</p></div><a class="button button-ghost" href="#communaute">VOIR LES RÉSEAUX</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-wrap footer-inner">
+      <a class="brand" href="#accueil"><img src="assets/game-icon.svg" alt="" class="brand-icon"><span>BEAST<span>WARS</span></span></a>
+      <p>© <span id="year"></span> BEASTWARS. Tous droits réservés.</p>
+      <div class="footer-links"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a></div>
+      <p class="disclaimer">Ce jeu n'est pas affilié à Roblox Corporation. Roblox est une marque de Roblox Corporation.</p>
+    </div>
+  </footer>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
